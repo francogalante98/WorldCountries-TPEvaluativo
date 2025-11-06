@@ -32,17 +32,18 @@ WorldCountries-TPEvaluativo/
 ├── contacto.html
 │
 ├── css/
-│ └── styles.css
+│   └── styles.css
 │
-├── js/
-│ └── main.js
-│
+└── js/
+│   ├── main.js
+│   └── form.js
 └── img/
-├── Tierra.png
-├── avatar.png
-└── conexion.jpg
+    ├── Tierra.png
+    ├── avatar.png
+    └── conexion.jpg
 
-## Funcionamiento general
+
+## 🌐 Funcionamiento general
 ### Página de inicio (`index.html`)
 - Carga los datos de todos los países desde la API `https://restcountries.com/v3.1/all?fields=name,flags,capital,population,region`.
 - Muestra los resultados en **cards** con bandera, nombre, capital, región y población.
@@ -64,7 +65,7 @@ WorldCountries-TPEvaluativo/
 - Si los campos no están completos o no se aceptan los términos, aparece un **alerta**.
 - Al enviar correctamente, muestra un **mensaje de éxito** y resetea el formulario.
 
-## Detalles de diseño
+## 🎨 Detalles de diseño
 - **Paleta principal:** tonos azules inspirados en la Tierra.  
 - **Tipografía:** Inter / Poppins, modernas y legibles.  
 - **Fondo:** imagen del planeta Tierra con opacidad y fusión.  
@@ -72,7 +73,7 @@ WorldCountries-TPEvaluativo/
 - **Responsive:** diseño adaptable a móviles, tablets y escritorio (mobile first).  
 - **Header y footer fijos:** navegación accesible y diseño consistente en todo el sitio.
 
-## Lógica en JavaScript
+## 🧠 Lógica en JavaScript
 El script `main.js` se encarga de:
 1. Detectar en qué página se encuentra el usuario mediante la clase del `<body>`.
 2. Si es la página **home**, realiza:
@@ -81,14 +82,14 @@ El script `main.js` se encarga de:
    - Filtrado en vivo por nombre.
 3. Si es la página **contact**, valida el formulario antes de enviarlo.
 
-## Objetivo educativo
+## 📚 Objetivo educativo
 Este proyecto fue desarrollado como trabajo práctico de la materia **Diseño Web**, en la **Tecnicatura Superior en Desarrollo de Software (ISFT N° 194)**.  
 Su propósito es demostrar el manejo de:
 - APIs REST con JavaScript puro.  
 - Maquetación semántica y diseño responsive.  
 - Validación de formularios y experiencia de usuario.
 
-## Equipo de desarrollo
+## 👥 Equipo de desarrollo
 
 | **Franco Galante** | Diseño general del sitio, elección de paleta, estructura responsive e integración API, implementación de fetch y lógica de búsqueda.
 | **Bautista Rodríguez Viau** | Diseño de la sección de contacto, validaciones con JS, redacción y semántica HTML.
