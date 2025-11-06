@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorldCountries - Contacto</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="contact">
+  <header>
+    <h1>🌍 WorldCountries</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <h2>📩 Contactanos</h2>
+    <img src="img/conexion.jpg" alt="contacto" class="contact-image">
+    <p>Dejanos tu mensaje en el siguiente formulario y te responderemos a la brevedad.</p>
+
+    <form id="form-contacto" class="contact-form">
+      
+      <label for="nombre">Nombre completo:</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        placeholder="Tu nombre y apellido"
+      >
+
+      <label for="email">Correo electrónico:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="nombre@ejemplo.com"
+      >
+
+      <label for="motivo">Motivo del contacto:</label>
+      <select id="motivo" name="motivo">
+        <option value="">Seleccioná una opción...</option>
+        <option value="consulta">Consulta general</option>
+        <option value="sugerencia">Sugerencia</option>
+        <option value="soporte">Soporte técnico</option>
+        <option value="otros">Otros</option>
+      </select>
+
+      <fieldset class="radio-group">
+        <legend>¿Desea recibir novedades?</legend>
+        <label><input type="radio" name="novedades" value="si"> Si</label>
+        <label><input type="radio" name="novedades" value="no"> No</label>
+      </fieldset>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea 
+        id="mensaje" 
+        name="mensaje" 
+        placeholder="Escribí tu consulta o comentario..."
+      ></textarea>
+
+      <label class="terminos">
+        <input type="checkbox" id="acepto" name="acepto">
+        Acepto los términos y condiciones
+      </label>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+
+<footer>
+    <p>Desarrollado por Franco Galante y Bautista Rodríguez Viau | <a href="https://github.com/francogalante98/WorldCountries-TPEvaluativo" target="_blank">Repositorio GitHub</a> | © 2025 - Diseño Web - Desarrollo de Software - ISFT 194</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WorldCountries - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+
+</head>
+<body class="home">
+  <header>
+    <h1>🌍 WorldCountries</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h2>Explorá los países del mundo</h2>
+    <p class="subtitle">Datos obtenidos desde la API pública RestCountries</p>
+    
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search-input" 
+        class="search-input" 
+        placeholder="Buscar país por nombre"
+        aria-label="Buscar países"
+      >
+      <span id="search-results-count" class="results-count"></span>
+    </div>
+    
+    <div id="error" class="error"></div>
+    <div id="countries-container" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>Desarrollado por Franco Galante y Bautista Rodríguez Viau | <a href="https://github.com/francogalante98/WorldCountries-TPEvaluativo" target="_blank">Repositorio GitHub</a> | © 2025 - Diseño Web - Desarrollo de Software - ISFT 194</p>
+  </footer>
+
+  
+</body>
+</html>

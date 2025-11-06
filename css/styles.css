@@ -1,0 +1,452 @@
+
+:root {
+  --bg: #f8fafc;
+  --primary: #0077b6;
+  --secondary: #00b4d8;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --card-bg: #ffffff;
+  --border-radius: 14px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 24px rgba(0, 119, 182, 0.12);
+  --border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Tierra.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: darken;
+  z-index: -1;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, #005a8c 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: var(--shadow-hover);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+nav a {
+  color: white;
+  margin: 0 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  opacity: 0.85;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+main > *:first-child {
+  margin-top: 0 !important;
+}
+
+h2 {
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+footer {
+  background: linear-gradient(135deg, var(--secondary) 0%, #0099b8 100%);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer a:hover {
+  opacity: 0.9;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  font-size: 1rem;
+  width: 100%;
+  max-width: 420px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  background: white;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1), var(--shadow-hover);
+  background: white;
+}
+
+.search-input::placeholder {
+  color: var(--text-light);
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+  min-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(0, 119, 182, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin: 1.2rem 1.2rem 0.6rem;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 0.5rem 1.2rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.card p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.card p:last-child {
+  padding-bottom: 1.2rem;
+}
+
+#error {
+  color: #dc2626;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.loading {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.error {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.contact-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: var(--border);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+button:hover {
+  background: #005a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 119, 182, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.about {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.about h2,
+.about h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+.about p,
+.about ul {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: black;
+}
+
+.about ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.member {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.member:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.member:hover img {
+  transform: scale(1.05);
+}
+
+.member h4 {
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 320px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .member {
+    max-width: 300px;
+  }
+}

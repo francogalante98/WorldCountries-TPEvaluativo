@@ -22,6 +22,7 @@ El proyecto fue desarrollado utilizando únicamente tecnologías **Front-End nat
 - **HTML5** → Estructura semántica del sitio.  
 - **CSS3** → Diseño, colores, responsive y efectos visuales.  
 - **JavaScript (ES6)** → Consumo de la API y validación de formularios.  
+- **Visual Studio Code** → Desarrollar, organización y pruebas de código.
 - **API pública:** [RestCountries](https://restcountries.com/v3.1/all)
 
 ## ⚙️ Estructura del proyecto
